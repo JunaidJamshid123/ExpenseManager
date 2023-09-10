@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_bg"
+
+    android:layout_height="match_parent"
+    tools:context=".BottonFragmentsheet">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/incomebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/default_selector"
+                    android:textColorHint="@color/black"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Income"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expencebtn"
+                    android:background="@drawable/default_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:text="Expance"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textinputbackground"
+                    android:textColor="@color/black"
+                    android:id="@+id/date"
+                    android:textColorHint="@color/black"
+                    android:focusable="false"
+                    android:hint="Select Date">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textinputbackground"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:id="@+id/amount"
+                    android:hint="Amount"
+                    android:inputType="number">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/textinputbackground"
+                    android:id="@+id/catagory"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:hint="Catagory">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:id="@+id/account"
+                    android:focusable="false"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/textinputbackground"
+                    android:layout_height="wrap_content"
+                    android:hint="Account">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:id="@+id/Notes"
+                    android:background="@drawable/textinputbackground"
+                    android:hint="Note">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:id="@+id/SaveTransaction"
+                android:backgroundTint="@color/orange"
+                android:text="Save Transaction"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:cornerRadius="5dp">
+
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

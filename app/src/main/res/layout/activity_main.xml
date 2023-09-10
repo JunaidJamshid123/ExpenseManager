@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/white"
+        android:backgroundTint="@color/orange"
+        android:layout_width="match_parent"
+        app:tabTextAppearance="@style/TabTextStyle"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:minHeight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/L1"
+        android:layout_height="wrap_content"
+        android:background="#F44336"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_chevron" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="May 17, 2023"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_chevron" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/L1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/orange"
+        app:tabIndicatorColor="@color/white"
+        android:id="@+id/tablayout"
+        android:scrollbars="horizontal"
+        app:tabTextColor="@color/white"
+        app:tabTextAppearance="@style/TabTextStyle"
+        app:tabMode="scrollable"
+        android:textAllCaps="false"
+        app:tabGravity="fill"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calender" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/L22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Income"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="0.0"
+                android:id="@+id/incometxt"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Expence"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="0.0"
+                android:id="@+id/ExpenseTxt"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Total"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="0.0"
+                android:id="@+id/totalTxt"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/L22"
+        android:id="@+id/TransactioLayoutMain"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        android:layout_height="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/bottomNav"
+        app:menu="@menu/bottonnavmenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/bottonStyleIndicatio"
+        android:background="@color/orange"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_height="wrap_content">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/Addbtn"
+        android:layout_marginBottom="8dp"
+        app:backgroundTint="@color/orange"
+        android:src="@drawable/ic_plus"
+        app:tint="@color/white"
+        android:layout_height="wrap_content">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
